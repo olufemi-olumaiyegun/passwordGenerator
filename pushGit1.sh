@@ -1,2 +1,2 @@
 git commit -m $1
-git push origin "testingScript"
+git push origin $3
