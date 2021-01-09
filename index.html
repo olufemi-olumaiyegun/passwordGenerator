@@ -7,44 +7,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div id="masterDiv" style="width: 50%; margin-top:20%; margin-left:20%; background-color:purple; padding:30px;padding-left: 100px: padding-right:100px; border-radius:10px">
-      <div id="bufferBox" style="background-color:white; height:40px; padding-top:15px"><span style="background-color:white;">bufferHere</span>
-     <a href="#"><i class="fa fa-clipboard" style="float:right; color: black;"></i> </a> </div>
+    <div id="masterDiv" style="width: 20%; margin-top:10%;margin-left:35%; background-color:rgb(117, 92, 46);padding-top:3%;padding-left: 100px; padding-right:100px; border-radius:10px">
+      <div style="background-color:rgb(245, 228, 228); height:40px; padding-top:15px; border-radius: 7px;"><span style="width: 100%; color: black; padding: 7px; " id="bufferBox">.....</span>
+       <div style="float: right; padding:0px 10px;"> <button id="clipboard"><i class="fa fa-clipboard" style="color: black;"></i> </button><button style="margin-left:2px" id="clear">clear</button></div>
+     </div>
 
 
-<div style="height:400px;">
+<div style="height:300px;">
 
-      <div id="containerDiv" style="box-sizing:border-box">
         <div style="margin-bottom: 10px; margin-top: 20px; height: 30px; color: white">
           <form>
-            <label for="Length">Length of password</label>
-            <input type="number" id="Length" value="20"/>
+            <label style="border:1px solid rgb(179, 179, 187); border-radius: 3px; background-color: rgb(179, 179, 187); padding:2px">Length of password</label>
+            <input type="number" id="Length" value="20" min="8" max="25"/>
           </form>
         </div>
 
         <div style="margin-bottom: 10px;height: 30px;  color:white">
-          <form>
-            <label for="specialChar">Include Uppercase</label>
-            <input type="checkbox" id="specialChar"/>
+          <form style="display: flex;">
+            <div>
+              <label style="border:1px solid limegreen; border-radius: 3px; background-color: limegreen; padding:2px">Include Uppercase</label>
+
+            </div>
+            <div style="float: right;">
+              <input type="checkbox" id="upper"/>
+
+            </div>
+          </form>
+
+        </div>
+        <div style="margin-bottom: 10px;height: 30px;  color:white;">
+          <form style="display: flex;">
+            <div>
+            <label style="background-color: mediumslateblue; border: 1px solid mediumslateblue; border-radius: 4px; padding:2px">Include lowercase</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lower" style="float: right;"/>
+
+          </div>
           </form>
 
         </div>
         <div style="margin-bottom: 10px; height: 30px; color:white">
-          <form>
-            <label for="specialChar">Include special characters</label>
-            <input type="checkbox" id="specialChar"/>
-          </form>        </div>
+          <form style="display: flex;">
+            <div>
+              <label style="border:1px solid rgb(179, 179, 187); border-radius: 3px; background-color: rgb(179, 179, 187); padding:2px">Include special characters</label>
+
+            </div>
+            <div style="float: right;">
+              <input type="checkbox" id="specialChar"/>
+
+            </div>
+          </form>        
+        </div>
         <div style="margin-bottom: 10px;height: 30px;color:white">
-          <form>
-            <label for="specialChar">Include numbers</label>
-            <input type="checkbox" id="specialChar"/>
-          </form>        </div>
+          <form style="display: flex;">
+            <div>
+              <label style="border:1px solid rgb(179, 179, 187); border-radius: 3px; background-color: rgb(179, 179, 187); padding:2px">Include numbers</label>
 
-      </div>
-      <a href="#" style="text-decoration:none; color:white"><div style="background-color:red; margin-top:30px; height:50px;border-radius:7px; padding-left:175px; padding-right: 75px; padding-top:30px">GENERATE PASSWORD </div></a>
+            </div>
+            <div style="float: right;">
+              <input type="checkbox" id="numbers"/>
+
+            </div>
+          </form>        
+        </div>
+
+      <button id="generate" style="width: 100%; background: rgb(253, 232, 218)2, 218); height: 15%; font-size: large;"> Generate password </button>
 
 
-    </div>
-
+</div>
+    <script type="text/javascript" src="generator.js"></script>
   </body>
 </html>
